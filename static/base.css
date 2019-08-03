@@ -1,0 +1,512 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "微软雅黑";
+	-webkit-overflow-scrolling: touch;
+}
+
+em,
+i,
+strong {
+	font-style: normal;
+}
+
+strong {
+	font-weight: normal;
+}
+
+body {
+	line-height: 1.5;
+	font-size: 14px;
+	background-color: #FFFFFF;
+}
+
+div,
+p,
+li,
+ul {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+ul,
+li,
+p,
+input {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input,
+button {
+	outline: none;
+	border: 0px;
+	background-color: transparent;
+	font-size: 14px;
+}
+
+input::-webkit-input-placeholder {
+	color: #999999
+}
+
+input::input-placeholder {
+	color: #999999
+}
+
+textarea::-webkit-input-placeholder {
+	color: #999999
+}
+
+textarea::input-placeholder {
+	color: #999999
+}
+
+[v-cloak] {
+	display: none;
+}
+
+label {
+	color: #333333;
+}
+
+span {
+
+}
+
+img {
+	object-fit: cover;
+}
+
+.hide {
+	display: none !important;
+}
+
+.box {
+	width: 100%;
+	height: auto;
+	position: relative;
+	min-width: 1200px;
+}
+.font_blue{
+	color: #2590FE !important;
+}
+.mb30{
+	margin-bottom: 30px;
+}
+.textblack{
+	color: #333;
+}
+
+/*头部*/
+
+.base_headContent {
+	width: 100%;
+	height: auto;
+	min-width: 1200px;
+	display: flex;
+	justify-content: center;
+}
+
+.base_headContent>.base_headCont {
+	width: 1200px;
+	height: 70px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.base_headContent>.base_headCont>img.logo {
+	height:70%;
+}
+
+.base_headContent>.base_headCont>.base_head_tap {
+	width: auto;
+	height: 100%;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.base_headContent>.base_headCont>.base_head_tap>li {
+	font-size: 16px;
+	color: #666666;
+	height: 100%;
+	width: auto;
+	position: relative;
+	display: inline-flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	margin-left: 40px;
+	cursor: pointer;
+}
+
+.base_headContent>.base_headCont>.base_head_tap>li.tap>a {
+	color: #666666;
+}
+
+.base_headContent>.base_headCont>.base_head_tap>li.tap.active a,
+.base_headContent>.base_headCont>.base_head_tap>li.tap a:hover {
+	color: #2590FE;
+}
+
+.base_headContent>.base_headCont>.base_head_tap>li.tap.active:after,
+.base_headContent>.base_headCont>.base_head_tap>li.tap:hover:after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 2px;
+	background-color: #2590FE;
+}
+
+.base_headContent>.base_headCont>.base_head_tap>li.login {
+	margin-left: 70px;
+}
+
+.base_headContent>.base_headCont>.base_head_tap>li.login:before {
+	content: "";
+	position: absolute;
+	left: -35px;
+	top: 20px;
+	height: 30px;
+	width: 1px;
+	background-color: #999999;
+}
+
+.base_headContent>.base_headCont>.base_head_tap>li.register {
+	width: 100px;
+	height: 42px;
+	color: #FFFFFF;
+	background-color: #2590FE;
+}
+.base_headContent>.base_headCont>.base_head_tap>li.loginName {
+	width: 120px;
+	height: 42px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #FFFFFF;
+	background-color: #2590FE;
+}
+
+/*底部*/
+
+.base_bottomContent{
+	width: 100%;
+	height: auto;
+	background-color: #2A3341;
+	display: flex;
+	justify-content: center;
+	padding: 30px 0px;
+}
+
+.base_bottomContent .base_bottomCont{
+	width: 1200px;
+	height: auto;
+	color: #FFFFFF;
+}
+.base_bottomContent .base_bottomCont .cont_top{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-content: center;
+	align-items: center;
+}
+.base_bottomContent .base_bottomCont .cont_top a{
+	color: #FFFFFF;
+	font-size: small;
+	margin-right: 20px;
+}
+.base_bottomContent .base_bottomCont .cont_top li{
+	margin-right: 20px;
+}
+.base_bottomContent .base_bottomCont ul.cont_top{
+	margin-top: 10px;
+}
+
+/*登录注册*/
+.loginContent{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0,0,0,0.2);
+	z-index: 20;
+}
+.loginContent>.loginCont{
+	width: 500px;
+	height: auto;
+	min-height: 540px;
+	background-color: #FFFFFF;
+	position: relative;
+	padding-bottom:60px;
+}
+.loginContent>.loginCont .login_tap{
+	width: 100%;
+	height: auto;
+	background-color: #F9F9F9;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-around;
+}
+.loginContent>.loginCont .login_tap li{
+	width: 50%;
+	height: 60px;
+	display: inline-flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	color: #333333;
+	font-size: 18px;
+	cursor: pointer;
+	position: relative;
+	letter-spacing: 1px;
+}
+.loginContent>.loginCont .login_tap li.active{
+	color: #2590FE;
+}
+.loginContent>.loginCont .login_tap li.active:after{
+	position: absolute;
+	bottom: 0px;
+	left: calc(50% - 25px);
+	content: "";	
+	width: 50px;
+	height: 3px;
+	background-color: #2590FE;
+}
+.loginContent>.loginCont .Agreement,
+.loginContent>.loginCont .Input_cont,
+.loginContent>.loginCont .btn{
+	width: 80%;
+	height: 50px;
+	margin: auto;
+	margin-bottom: 20px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+.loginContent>.loginCont .Agreement{
+	color: #666666;
+	font-size: 12px;
+	margin-top: 20px;
+}
+.loginContent>.loginCont .inputTip{
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	color: #FF0000;
+}
+.loginContent>.loginCont .Input_cont{
+	padding: 0px 20px;
+	border: 1px solid #E1E1E1;
+}
+.loginContent>.loginCont .Input_cont input{
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+}
+.loginContent>.loginCont .Agreement,
+.loginContent>.loginCont .Input_cont span{
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: small;
+}
+.loginContent>.loginCont .btn{
+	margin-bottom: 0px;
+}
+.loginContent>.loginCont .btn button{
+	width: 100%;
+	height: 100%;
+	background-color: #2590FE;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 18px;
+}
+.loginContent>.loginCont .close{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+.loginContent>.loginCont .close button{
+	color: #999999;
+	font-size: 18px;
+	background: transparent;
+	cursor: pointer;
+}
+.loginContent>.loginCont .forget_pass{
+	width: 80%;
+	height: auto;
+	margin: auto;
+	margin-bottom: 20px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: flex-end;
+	color: #333333;
+}
+.loginContent>.loginCont .forget_pass a{
+	color: #333333;
+}
+/*加入我们*/
+.JoinUs{
+	width: 100%;
+	height: auto;
+	min-width: 1200px;
+	padding: 80px 0px;
+	text-align: left;
+}
+.JoinUs .title{
+	color: #2590FE;
+    font-size: 20px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 15px;
+}
+.JoinUs .title:after{
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: calc(50% - 20px);
+	width: 40px;
+	height: 2px;
+	background-color: #2590FE;
+}
+.JoinUs .cont_data{
+	width: 1200px;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	margin-top: 50px;
+}
+.JoinUs .cont_data .cont_left{
+	width: 50%;
+	margin-top: 30px;
+}
+.JoinUs .cont_data .cont_left li{
+	width: 100%;
+	height: auto;
+}
+.JoinUs .cont_data .cont_left li.ct1{
+	color: #333333;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding-bottom: 30px;
+}
+.JoinUs .cont_data .cont_left li.ct2{
+	color: #666666;
+	line-height: 35px;
+}
+.JoinUs .cont_data .cont_left li.ct3{
+	color: #000000;
+	font-size: 16px;
+	margin-top: 20px;
+}
+.JoinUs .cont_data .cont_left li.ct3 .iconfont{
+	color: #000000;
+	font-size: 18px;
+	margin-right: 10px;
+}
+.JoinUs .cont_data .cont_left li.ct4{
+	padding-top: 30px;
+}
+.JoinUs .cont_data .cont_left li.ct4 img{
+	height: 130px;
+}
+
+.JoinUs .cont_data .register_table{
+	width: 45%;
+	height: auto;
+}
+.JoinUs .cont_data .register_table .title{
+	text-align: left;
+	padding: 15px 0px;
+}
+.JoinUs .cont_data .register_table .title:after{
+	left: 0px;
+}
+.JoinUs .cont_data .register_table .cont_Input{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	padding: 0px 20px;
+	margin-top: 20px;
+	border: 1px solid #E5E5E5;
+}
+.JoinUs .cont_data .register_table .cont_Input input{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	font-size: 18px;
+}
+.JoinUs .cont_data .register_table .cont_Input span{
+	white-space: nowrap;
+	color: #2590FE;
+	cursor: pointer;
+}
+.JoinUs .cont_data .register_table .btn_Content{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+.JoinUs .cont_data .register_table .btn_Content button{
+	height: 60px;
+	width: 130px;
+	background-color: #2590FE;
+	font-size:18px;
+	color: #FFFFFF; 
+	cursor: pointer;
+}
+.JoinUs .cont_data .register_table .Agreement{
+	width: 100%;
+	height: auto;
+	color: #333333;
+	padding-top: 20px;
+	font-size: 16px;
+	font-weight: 500;
+}
+.JoinUs .cont_data .register_table .Agreement span{
+	color: #2590FE;
+	cursor: pointer;
+}
