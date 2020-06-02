@@ -479,13 +479,17 @@
 							if(info.Data.Data[0].act.data.jsonData) {
 								if(info.Data.Data[0].act.data.jsonData.goods_info1) {
 									this.$router.push("/search_commodity?id=" + trxItem + "&from=browser");
+                  return;
 								}
 								if(info.Data.Data[0].act.data.jsonData.info) {
 									this.$router.push("/search_purchase?id=" + trxItem + "&from=browser");
+                  return;
 								}
 								if(info.Data.Data[0].act.data.jsonData.ip2) {
 									this.$router.push("/search_traceability?id=" + trxItem + "&from=browser");
+                  return;
 								}
+								this.$router.push("/search_plane?id=" + trxItem + "&from=browser");
 							} else {
 								this.$router.push("/transaction_details?id=" + trxItem + "&from=browser");
 							}
@@ -503,8 +507,8 @@
 			startListen: function() {
 
 				$('.maptouch').mousemove((e) => {
-					var positionX = e.pageX - $('.node-list').offset().left; //获取当前鼠标相对img的X坐标  
-					var positionY = e.pageY - $('.node-list').offset().top; //获取当前鼠标相对img的Y坐标  
+					var positionX = e.pageX - $('.node-list').offset().left; //获取当前鼠标相对img的X坐标
+					var positionY = e.pageY - $('.node-list').offset().top; //获取当前鼠标相对img的Y坐标
 					var nodeBoxArr = $('.node-box');
 					var showArr = [];
 					for(var j in nodeBoxArr) {
@@ -565,13 +569,18 @@
 								if(info.Data.Data[0].act.data.jsonData) {
 									if(info.Data.Data[0].act.data.jsonData.goods_info1) {
 										this.$router.push("/search_commodity?id=" + this.searchText + "&from=browser");
+                    return;
 									}
 									if(info.Data.Data[0].act.data.jsonData.info) {
 										this.$router.push("/search_purchase?id=" + this.searchText + "&from=browser");
+                    return;
 									}
 									if(info.Data.Data[0].act.data.jsonData.ip2) {
 										this.$router.push("/search_traceability?id=" + this.searchText + "&from=browser");
+                    return;
 									}
+
+                  this.$router.push("/search_plane?id=" + this.searchText + "&from=browser");
 								} else {
 									this.$router.push("/transaction_details?id=" + this.searchText + "&from=browser");
 								}
@@ -602,7 +611,7 @@
 	.base_headContent>.base_headCont>.base_head_tap>li.tap.tap2 a {
 		color: #2590fe;
 	}
-	
+
 	.base_headContent>.base_headCont>.base_head_tap>li.tap.tap2:after {
 		content: '';
 		position: absolute;
@@ -612,7 +621,7 @@
 		height: 2px;
 		background-color: #2590fe;
 	}
-	
+
 	.Content {
 		width: 100%;
 		height: auto;
@@ -620,7 +629,7 @@
 		background-color: #fff;
 		padding-top: 80px;
 	}
-	
+
 	.Content .title {
 		color: #2590fe;
 		font-size: 23px;
@@ -630,7 +639,7 @@
 		text-align: center;
 		padding: 15px;
 	}
-	
+
 	.Content .title:after {
 		content: '';
 		position: absolute;
@@ -640,13 +649,13 @@
 		height: 2px;
 		background-color: #2590fe;
 	}
-	
+
 	.Content .ListContent {
 		width: 1200px;
 		height: auto;
 		margin: auto;
 	}
-	
+
 	.Content .ListContent .cont_list {
 		width: 100%;
 		height: auto;
@@ -655,7 +664,7 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-	
+
 	.Content .ListContent .cont_list li {
 		height: 60px;
 		white-space: nowrap;
@@ -666,50 +675,50 @@
 		align-items: center;
 		color: #333333;
 	}
-	
+
 	.Content .ListContent .cont_list li.ct1 {
 		width: 200px;
 		padding-left: 30px;
 	}
-	
+
 	.Content .ListContent .cont_list li.ct2 {
 		width: calc(100% - 600px);
 		padding-left: 30px;
 	}
-	
+
 	.Content .ListContent .cont_list li.ct2:hover {
 		text-decoration: underline;
 		cursor: pointer;
 	}
-	
+
 	.Content .ListContent .cont_list.list_name li.ct5 {
 		width: calc(100% - 600px);
 		text-decoration: none;
 		padding-left: 30px;
 	}
-	
+
 	.Content .ListContent .cont_list li.ct3 {
 		width: 200px;
 	}
-	
+
 	.Content .ListContent .cont_list li.ct4 {
 		width: 200px;
 	}
-	
+
 	.Content .ListContent .cont_list.list_name {
 		background-color: #f5f5f5;
 		margin-top: 30px;
 	}
-	
+
 	.Content .ListContent .cont_list.list_name li {
 		color: #666666;
 		position: relative;
 	}
-	
+
 	.Content .ListContent .cont_list.list {
 		border-bottom: 1px solid #f5f5f5;
 	}
-	
+
 	.Content .ListContent .cont_list.tips li {
 		background-color: #f5f5f5;
 		width: 100%;
@@ -717,7 +726,7 @@
 		justify-content: center;
 		cursor: pointer;
 	}
-	
+
 	.ChoiceContent {
 		position: absolute;
 		top: 60px;
@@ -731,7 +740,7 @@
 		z-index: 100;
 		padding: 5px 0px;
 	}
-	
+
 	.ChoiceContent p {
 		width: 100%;
 		height: auto;
@@ -742,11 +751,11 @@
 		font-size: 9px;
 		display: block;
 	}
-	
+
 	.ChoiceContent p:hover {
 		color: #2590FE;
 	}
-	
+
 	.ChoiceContent p.active {
 		color: #2590FE;
 	}

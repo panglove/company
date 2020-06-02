@@ -70,6 +70,15 @@ export default new Router({
 				title: '商品详情  - 重庆区块链防伪溯源平台  - 匿名科技'
 			}
 		},
+		// 商品详情
+		{
+			path: '/search_plane',
+			name: 'search_plane',
+			component: resolve => require(['@/pages/search_plane'], resolve),
+			meta: {　　　　
+				title: '溯源详情  - 重庆区块链防伪溯源平台  - 匿名科技'
+			}
+		},
 		// 采购详情
 		{
 			path: '/search_purchase',
